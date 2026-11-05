@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="page">
+        <header>
+            <h1>
+                <span>NUMBER GUESSING</span><br>
+                GAME
+            </h1>
+            <p>TEST YOUR LOGIC <b>•</b> BEAT THE CHALLENGE</p>
+        </header>
+
+        <section class="scene" aria-label="Animated space scene">
+            <div id="stars"></div>
+
+            <div class="world">
+                <div class="orb"></div>
+                <div class="cube one"></div>
+                <div class="cube two"></div>
+                <div class="mini-orb"></div>
+                <div class="orbit"></div>
+                <div class="orbit second"></div>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="stats">
+                <article>
+                    <small>ROUND</small>
+                    <strong id="round">1</strong>
+                </article>
+
+                <article>
+                    <small>TOTAL WINS</small>
+                    <strong class="cyan" id="wins">0</strong>
+                </article>
+
+                <article>
+                    <small>ATTEMPTS</small>
+                    <strong class="pink" id="attempts">0 / 7</strong>
+                </article>
+            </div>
+
+            <div class="difficulty">
+                <label for="difficulty">DIFFICULTY</label>
+                <select id="difficulty">
+                    <option>Easy</option>
+                    <option selected>Medium</option>
+                    <option>Hard</option>
+                </select>
+            </div>
+
+            <p class="range" id="range">
+                Guess a number between 1 and 100
+            </p>
+
+            <form id="form">
+                <input
+                    id="guess"
+                    type="number"
+                    inputmode="numeric"
+                    placeholder="Enter your guess..."
+                    autocomplete="off"
+                >
+                <button id="guessBtn" type="submit">
+                    GUESS <span>→</span>
+                </button>
+            </form>
+
+            <p id="feedback" aria-live="polite">
+                Make your first guess!
+            </p>
+
+            <button id="again" class="again" type="button" hidden>
+                ↻ &nbsp; PLAY AGAIN
+            </button>
+        </section>
+
+        <footer>Can you find the hidden number?</footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
